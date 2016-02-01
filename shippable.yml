@@ -16,9 +16,6 @@ matrix:
  include:
    - node_js: 4.2.0
      env: test1=bar
-   - node_js: "5.0"
-     env:
-        - test2=bar2
    
 
 build:

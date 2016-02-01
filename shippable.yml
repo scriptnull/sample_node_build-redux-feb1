@@ -29,13 +29,15 @@ build:
   ci:
     - ps -eax
     - ls -al
+    - echo $FOO
     - echo $test1 and $test2
     - echo $test3 and $test4
     - npm install
     - npm test
 
   post_ci:
-    - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node
+    - docker build -t=shippabledocker/hitchcock2_sample_node .
+    #- docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node
     - docker push shippabledocker/hitchcock2_sample_node
 
 integrations:

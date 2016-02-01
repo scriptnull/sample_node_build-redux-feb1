@@ -15,6 +15,7 @@ env:
 matrix:
  include:
    - node_js: 4.2.0
+     env: test1=bar
 
 build:
   
@@ -23,10 +24,11 @@ build:
     - ls -al
     - npm install
     - npm test
+    - echo $test1
 
-  post_ci:
-    - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node
-    - docker push shippabledocker/hitchcock2_sample_node
+  #post_ci:
+   # - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node
+    #- docker push shippabledocker/hitchcock2_sample_node
 
 integrations:
   hub:

@@ -15,7 +15,7 @@ env:
 
 matrix:
   include:
-    - node_js: 5.0
+    - node_js: 9.9
       env: test4=aaa
     
 build:

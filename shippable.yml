@@ -11,12 +11,12 @@ env:
 matrix:
   include:
    - node_js: 5.0
-     env: test1=aaa
-   - node_js: 0.12
-     env: 
-       - test2=bbb
-       - test3="1/2"
-   - node_js: "9.9"
+     #env: test1=aaa
+   #- node_js: 0.12
+    # env: 
+     #  - test2=bbb
+      # - test3="1/2"
+   #- node_js: "9.9"
    
 build:
   #pre_ci:

@@ -19,6 +19,8 @@ matrix:
    - node_js: "5.0"
      env:
         - test2=bar2
+   - node_js: 0.10.5
+        - test3= "$aa"
 
 build:
   

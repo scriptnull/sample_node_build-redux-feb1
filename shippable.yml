@@ -16,6 +16,9 @@ matrix:
  include:
    - node_js: 4.2.0
      env: test1=bar
+   - node_js: "5.0"
+     env:
+        - test2=bar2
 
 build:
   
@@ -24,7 +27,7 @@ build:
     - ls -al
     - npm install
     - npm test
-    - echo $test1
+    - echo $test1 and $test2
 
   #post_ci:
    # - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node

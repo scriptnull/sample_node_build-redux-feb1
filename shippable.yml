@@ -29,10 +29,10 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - npm install
-    - npm test
     - echo $test1 and $test2
     - echo $test3 and $test4
+    - npm install
+    - npm test
 
   #post_ci:
    # - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node

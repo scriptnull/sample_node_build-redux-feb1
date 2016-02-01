@@ -14,7 +14,7 @@ env:
     
 matrix:
  include:
-   - node_js: 4.2.0
+   - node_js: 9.9
      env: test1=bar
    
         

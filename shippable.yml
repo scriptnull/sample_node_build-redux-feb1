@@ -16,6 +16,12 @@ matrix:
  include:
    - node_js: 9.9
      env: test1=bar
+   - node_js: 4.2.2
+     env: 
+       - test2=aa
+       - test3=bb
+    - node_js: "5.0"
+    
    
         
 build:

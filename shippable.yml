@@ -20,7 +20,9 @@ matrix:
      env:
         - test2=bar2
    - node_js: 0.10.5
-        - test3= "$aa"
+     env:
+        - test3= "1/3"
+        - test4= "aaa"
 
 build:
   
@@ -30,6 +32,7 @@ build:
     - npm install
     - npm test
     - echo $test1 and $test2
+    - echo $test3 and $test4
 
   #post_ci:
    # - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node

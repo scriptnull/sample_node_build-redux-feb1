@@ -12,6 +12,9 @@ matrix:
   include:
    - node_js: 5.0
      env: test1=aaa
+   - node_js: 0.12
+     env: 
+       - test2=bbb
    
 build:
   #pre_ci:
@@ -27,7 +30,7 @@ build:
     - ps -eax
     - ls -al
     - echo $key1
-    - echo $test1
+    - echo $test1 and $test2
 
   #post_ci:
    # - docker push shippabledocker/sample_node

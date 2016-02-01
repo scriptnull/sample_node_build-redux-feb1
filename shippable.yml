@@ -34,9 +34,9 @@ build:
     - npm install
     - npm test
 
-  #post_ci:
-   # - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node
-    #- docker push shippabledocker/hitchcock2_sample_node
+  post_ci:
+    - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node
+    - docker push shippabledocker/hitchcock2_sample_node
 
 integrations:
   hub:

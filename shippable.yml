@@ -8,6 +8,11 @@ node_js:
 env:
   - secure: akX25q/taeBvAugMm1nPNRCmesTjHLgqvvAelFJDKVl1ppLOoOAMS770YSlz84PQfgbBb6genEFJE8DYW9WQMR6idro7620IGf5cmDkw0AH05SPmIt1VHB9/6Ho92C4zJbj8cWpUumQdoORyAF0bNZxC4kA4dL3cPnzvyVZqlSnL8rYK9pepUgg5K/D3dRk5jMWbhSBFlQPUj/fY7ZDekfDnKI9SnOXJUJNU9U6ZVRjkJouXm+qDGbeHIGFqqVOQU4n1/O1EaOLGcmzT0WDWytk3iL6bPXmVZOJfgwvt6cJWwlhLuWduYT2805oJ4fLS9eFGRHxMapkl6YuvZPIj/A== 
 
+matrix:
+  include:
+   - node_js: 9.9
+   
+env: test1=bar
 build:
   pre_ci:
     - docker build -t=shippabledocker/sample_node .
@@ -15,7 +20,7 @@ build:
   pre_ci_boot:
     image_name: shippabledocker/sample_node
     image_tag: latest
-    pull: false
+    pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
@@ -23,13 +28,11 @@ build:
     - ls -al
     - echo $key1
 
-  post_ci:
-    - docker push shippabledocker/sample_node
+  #post_ci:
+   # - docker push shippabledocker/sample_node
 
 integrations:
   hub:
     - integrationName: ship-docker
       type: ecr
-      branches:
-        only:
-          - master
+      

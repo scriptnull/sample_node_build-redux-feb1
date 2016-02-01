@@ -15,7 +15,7 @@ env:
 
 
 matrix:
-  ecclude:
+  exclude:
     - node_js: 0.10
       env: M1=one
     

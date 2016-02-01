@@ -12,6 +12,11 @@ env:
   matrix:
     - M1=one
 
+
+matrix:
+  include:
+    - node_js: 5.0
+    
 build:
   #pre_ci:
    # - docker build -t=shippabledocker/sample_node .

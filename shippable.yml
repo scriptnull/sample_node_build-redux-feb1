@@ -12,7 +12,6 @@ matrix:
   include:
    - node_js: 9.9
    
-env: test1=bar
 build:
   #pre_ci:
    # - docker build -t=shippabledocker/sample_node .

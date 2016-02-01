@@ -11,28 +11,25 @@ env:
 
   matrix:
     - M1=one
+    
+matrix:
+ include:
+   - node_js: 4.2.0
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/sample_node .
-
-  pre_ci_boot:
-    image_name: shippabledocker/sample_node
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-
+  
   ci:
     - ps -eax
     - ls -al
+    - npm install
+    - npm test
 
   post_ci:
-    - docker push shippabledocker/sample_node
+    - docker commit $SHIPPABLE_CONTAINER_NAME shippabledocker/hitchcock2_sample_node
+    - docker push shippabledocker/hitchcock2_sample_node
 
 integrations:
   hub:
     - integrationName: ship-docker
-      type: ecr
-      branches:
-        only:
-          - master
+      type: docker
+      

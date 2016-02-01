@@ -11,7 +11,19 @@ env:
 
   matrix:
     - M1=one
-
+    
+matrix:
+ include:
+   - node_js: 4.2.0
+     env: test1=bar
+   - node_js: "5.0"
+     env:
+        - test2=bar2
+   - node_js: 0.10.5
+     env:
+        - test3= "1/3"
+        - test4= "aaa"
+        
 build:
   pre_ci:
     - docker build -t=shippabledocker/sample_node .

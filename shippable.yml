@@ -16,6 +16,7 @@ env:
 matrix:
   include:
     - node_js: 5.0
+      env: test4=aaa
     
 build:
   #pre_ci:
@@ -37,6 +38,6 @@ build:
 
 integrations:
   hub:
-    - integrationName: ship-docker111
+    - integrationName: ship-docker
       type: docker
       

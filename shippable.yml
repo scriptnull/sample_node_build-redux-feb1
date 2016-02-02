@@ -38,6 +38,6 @@ build:
 
 integrations:
   hub:
-    - integrationName: ship-docker111
+    - integrationName: ship-docker
       type: docker
       

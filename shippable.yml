@@ -4,6 +4,7 @@ language: node_js
 # Version number
 node_js:
   - "0.12"
+  - "4.2.2"
 
 env:
   global:
@@ -13,7 +14,7 @@ env:
     - M1=one
     
 matrix:
- include:
+ exclude:
    - node_js: 4.2.2
     
     

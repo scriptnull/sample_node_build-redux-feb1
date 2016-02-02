@@ -8,8 +8,11 @@ node_js:
   - "4.2.2"
 
 env:
-  - M1=one
-  - M2=two
+ global:
+   - foo=bar
+ matrix:  
+   - M1=one
+   - M2=two
 
     
 matrix:

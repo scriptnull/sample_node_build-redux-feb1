@@ -17,7 +17,7 @@ env:
 matrix:
   exclude:
     - node_js: 5.0
-      BAR=foo
+      env: BAR=foo
     
 build:
   #pre_ci:

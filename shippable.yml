@@ -9,13 +9,13 @@ node_js:
 
 env:
   - M1=one
-  #encrypt key1=abcd
   - M2=two
   
 matrix:
   exclude:
    - node_js: 5.0
-     env: M1=one
+     env: 
+      - M1=one
    - node_js: 0.10
     
    
@@ -32,7 +32,7 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - echo $key1 and $M1
+    - echo $key1 and $M1 and $M2
    
   #post_ci:
    # - docker push shippabledocker/sample_node

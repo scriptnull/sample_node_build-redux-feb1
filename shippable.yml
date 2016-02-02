@@ -16,7 +16,7 @@ matrix:
    - node_js: 5.0
      env: 
       - M1=one
-   - node_js: 0.10
+   
     
    
 build:

@@ -8,11 +8,13 @@ node_js:
   -  "5.0"
 
 env:
+  - M1=one
   - secure: akX25q/taeBvAugMm1nPNRCmesTjHLgqvvAelFJDKVl1ppLOoOAMS770YSlz84PQfgbBb6genEFJE8DYW9WQMR6idro7620IGf5cmDkw0AH05SPmIt1VHB9/6Ho92C4zJbj8cWpUumQdoORyAF0bNZxC4kA4dL3cPnzvyVZqlSnL8rYK9pepUgg5K/D3dRk5jMWbhSBFlQPUj/fY7ZDekfDnKI9SnOXJUJNU9U6ZVRjkJouXm+qDGbeHIGFqqVOQU4n1/O1EaOLGcmzT0WDWytk3iL6bPXmVZOJfgwvt6cJWwlhLuWduYT2805oJ4fLS9eFGRHxMapkl6YuvZPIj/A== 
 
 matrix:
   exclude:
    - node_js: 5.0
+     env: M1=one
    - node_js: 0.10
      #env: test1=aaa
    #- node_js: 0.12

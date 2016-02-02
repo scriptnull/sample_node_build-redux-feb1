@@ -5,6 +5,7 @@ language: node_js
 node_js:
   - "0.12"
   - 5.0
+  - "4.2.2"
 
 env:
   global:
@@ -12,11 +13,15 @@ env:
 
   matrix:
     - M1=one
+    - M2=two
 
     
 matrix:
  exclude:
    - node_js: 5.0
+     env: M1=one
+   - node_js: 4.2.2
+     env: M2=two
    
 
 build:

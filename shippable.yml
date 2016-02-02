@@ -8,12 +8,8 @@ node_js:
   - "4.2.2"
 
 env:
-  global:
-    - FOO=FUBU
-
-  matrix:
-    - M1=one
-    - M2=two
+  - M1=one
+  - M2=two
 
     
 matrix:

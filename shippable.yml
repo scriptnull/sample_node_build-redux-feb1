@@ -29,8 +29,7 @@ build:
     - ps -eax
     - ls -al
     - echo $FOO
-    - echo $test1 and $test2
-    - echo $test3 and $test4
+    - echo $M1 and $M2
     - npm install
     - npm test
 

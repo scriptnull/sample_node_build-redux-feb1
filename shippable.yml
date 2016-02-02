@@ -7,8 +7,8 @@ node_js:
   -  5.0
 
 env:
-  global:
-    - FOO=FUBU
+  - FOO=FUBU
+  - BAR=foo
 
   matrix:
     - M1=one
@@ -17,6 +17,7 @@ env:
 matrix:
   exclude:
     - node_js: 5.0
+      BAR=foo
     
 build:
   #pre_ci:

@@ -11,8 +11,7 @@ env:
   - FOO=FUBU
   - BAR=foo
 
-  matrix:
-    - M1=one
+  
 
 
 matrix:

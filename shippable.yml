@@ -10,8 +10,8 @@ node_js:
 env:
   - M1=one
   #encrypt key1=abcd
-  - secure: U5y0hamlnB9dLaXhljnU/QtFUiSr3PItbScFi/J3lFCc+f5/60vMd4NBN4RLzJ4lUV13oCfw7RFmLA23gXrKNoF5ro/mlfMOUu9xzfRamX9+o1j6JqMB4RJIHVnjMZT5bXlj08264LrsqXkfky/wtk9ehQTeA0wehvQZf0aA/RF/sYUP5KCKPo7kOntV3b3WcVcGCtH6MOLlspL0/Q6sWtXvC7Q/WIFb3g/DujUXX1KyHaYK01b9Ib54Ew82nXkZk1mId56wO8f9WgBOtoLQIu3znJwg4DuQfLM7IuI7ucNcQM7oCt+fK9bXkkF6iQ/X6/WoZWW44vggDkz5PT32rQ== 
-
+  - M2=two
+  
 matrix:
   exclude:
    - node_js: 5.0
